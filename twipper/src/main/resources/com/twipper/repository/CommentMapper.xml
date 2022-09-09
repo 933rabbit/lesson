@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twipper.repository.CommentMapper">
+	<insert id="insert" parameterType="com.twipper.bean.Comment">
+		INSERT INTO comment_dat VALUES
+		(
+		#{id},
+		#{username},
+		#{email},
+		#{phoneNumber},
+		#{postCode}
+		)
+	</insert>
+	<select id="selectAll" resultType="com.twipper.bean.Comment">
+		SELECT * FROM comment_dat
+	</select>
+	<select id="select" resultType="com.twipper.bean.Comment">
+		SELECT * FROM comment_dat
+		WHERE id
+		= #{id}
+	</select>
+	<update id="update" parameterType="com.twipper.bean.Comment">
+		UPDATE comment_dat
+		SET username
+		= #{username},
+		email =
+		#{email},
+		phone_number = #{phoneNumber},
+		post_code
+		= #{postCode}
+		WHERE id
+		= #{id}
+	</update>
+	<delete id="delete">
+		DELETE FROM comment_dat
+		WHERE id = #{id}
+	</delete>
+</mapper>

@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>User</title>
+</head>
+<body>
+    <h1>UserResult</h1>
+    <table>
+        <tr>
+            <!-- th:textはthymeleafの機能を使用しgetAttributeできる。 -->>
+            <td>ID：</td><td th:text="${id}"></td>
+        </tr>
+        <tr>
+            <td>ニックネーム：</td><td th:text="${nickname}"></td>
+        </tr>
+    </table>
+<body>
+</html>
